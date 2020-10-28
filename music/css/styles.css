@@ -19,10 +19,17 @@ img {
 
 /* Style rules for mobile viewport */
 
-
-/* Hide tab-desk class */
+/* Tablet Viewport: Show tab-desk class, hide mobile class */
 .tab-desk {
+    display: block;
+}
+.mobile {
     display: none;
+}
+
+/* Tablet Viewport: Style rule for header content */
+span.tab-desk {
+    display: inline;
 }
 
 /* Style rules for header content */
@@ -47,16 +54,21 @@ nav ul {
 }
 
 nav li {
-    display: block;
-    font-size: 2em;
-    border-top: 1px solid #e5e9fc;
+    display: inline-block;
+    font-size: 1.5em;
+    border-right: 1px solid #e5e9fc;
+    border-top: none;
+}
+
+nav li:last-child {
+    border-right: none;
 }
 
 nav li a {
     display: block;
     color: #fff;
     text-align: center;
-    padding: 0.5em 1em;
+    padding: 0.25em 0.5em;
     text-decoration: none;
 }
 
@@ -138,3 +150,6 @@ footer a {
     color: #4645a8;
     text-decoration: none;
 }
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 550px), print {  }
